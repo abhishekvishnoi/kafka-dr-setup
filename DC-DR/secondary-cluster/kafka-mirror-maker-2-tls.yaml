@@ -12,7 +12,7 @@ spec:
           key: user.key
           secretName: primary-cluster-user2
         type: tls
-      bootstrapServers: 'kafka-primary-cluster-kafka-exttls-bootstrap-kafka.apps.cluster-cjn65.cjn65.sandbox2973.opentlc.com:443'
+      bootstrapServers: 'kafka-primary-cluster-kafka-exttls-bootstrap-kafka.apps.primary.com:443'
       tls:
         trustedCertificates:
           - pattern: '*.crt'
@@ -24,7 +24,7 @@ spec:
           key: user.key
           secretName: secondary-cluster-user2
         type: tls
-      bootstrapServers: 'kafka-secondary-cluster-kafka-exttls-bootstrap-kafka.apps.cluster-thvh4.thvh4.sandbox673.opentlc.com:443'
+      bootstrapServers: 'kafka-secondary-cluster-kafka-exttls-bootstrap-kafka.apps.secondary.com:443'
       config:
         config.storage.replication.factor: -1
         offset.storage.replication.factor: -1

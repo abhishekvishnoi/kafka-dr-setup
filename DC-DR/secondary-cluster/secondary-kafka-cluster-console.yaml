@@ -4,7 +4,7 @@ kind: Console
 metadata:
   name: secondary-kafka-conosle
 spec:
-  hostname: secondary-kafka-console.apps.cluster-thvh4.thvh4.sandbox673.opentlc.com
+  hostname: secondary-kafka-console.apps.secondary.com
   kafkaClusters:
     - name: kafka-secondary-cluster
       namespace: kafka

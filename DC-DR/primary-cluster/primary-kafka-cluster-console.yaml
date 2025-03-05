@@ -4,7 +4,7 @@ kind: Console
 metadata:
   name: primary-kafka-conosle
 spec:
-  hostname: primary-kafka-console.apps.cluster-cjn65.cjn65.sandbox2973.opentlc.com
+  hostname: primary-kafka-console.apps.primary.com
   kafkaClusters:
     - name: kafka-primary-cluster
       namespace: kafka

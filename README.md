@@ -4,6 +4,8 @@
 **Active-Active Kafka Disaster Recovery Setup with Strimzi**
 This guide provides step-by-step instructions for setting up an active-active disaster recovery (DR) setup for Apache Kafka using the Strimzi operator on OpenShift. The setup ensures bidirectional data replication between two Kafka clusters, enabling both clusters to serve clients simultaneously.
 
+<img src="DC-DR/images/DR_Setup.jpg"/>
+
 **Prerequisites**
 Two OpenShift clusters (primary and DR) with network connectivity.
 
@@ -65,3 +67,11 @@ https://github.com/abhishekvishnoi/kafka-dr-setup/blob/2bbebfe5f1114a866f88b3323
 
 
 https://github.com/abhishekvishnoi/kafka-dr-setup/blob/b18f00479d45a4c4ac85a078bdf47aacf38aaa81/DC-DR/secondary-cluster/kafka-mirror-maker-2-tls.yaml#L1-L58
+
+
+### Test the setup by pushing soem data to a sample topic in primary cluster
+
+<img src="DC-DR/images/primary-kafka-cluster.png"/>
+
+
+<img src="DC-DR/images/sec-kafka-cluster.png"/>
