@@ -1,8 +1,8 @@
-# kafka-dr-setup : active-active 
+# kafka-dr-setup : active-passive 
 
 
-**Active-Active Kafka Disaster Recovery Setup with Strimzi**
-This guide provides step-by-step instructions for setting up an active-active disaster recovery (DR) setup for Apache Kafka using the Strimzi operator on OpenShift. The setup ensures bidirectional data replication between two Kafka clusters, enabling both clusters to serve clients simultaneously.
+**Active-Passive Kafka Disaster Recovery Setup with Strimzi**
+This guide provides step-by-step instructions for setting up an active-active disaster recovery (DR) setup for Apache Kafka using the Strimzi operator on OpenShift. The setup ensures unidirectional data replication between two Kafka clusters.
 
 <img src="DC-DR/images/DR_Setup.jpg"/>
 
