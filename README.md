@@ -65,8 +65,7 @@ https://github.com/abhishekvishnoi/kafka-dr-setup/blob/2bbebfe5f1114a866f88b3323
 
 .1 Use thefollwoing CR to deploy mirrormaker2
 
-
-https://github.com/abhishekvishnoi/kafka-dr-setup/blob/b18f00479d45a4c4ac85a078bdf47aacf38aaa81/DC-DR/secondary-cluster/kafka-mirror-maker-2-tls.yaml#L1-L58
+https://github.com/abhishekvishnoi/kafka-dr-setup/blob/55a78c8bfc1345bdbe4d22e316642455d8b4736f/DC-DR/secondary-cluster/kafka-mirror-maker-2-tls.yaml#L1-L58
 
 
 ### Test the setup by pushing soem data to a sample topic in primary cluster
