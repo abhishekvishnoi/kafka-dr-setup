@@ -14,33 +14,54 @@ Persistent storage configured for Kafka topics and data.
 Network access between Kafka brokers in both clusters.
 
 Steps
-1. Deploy Kafka Clusters
-   Deploy Kafka clusters on both the primary and DR sites using Strimzi custom resources (CRs).
 
-1.1. Primary Cluster
 
-1.1.1. Create a Kafka CR on the primary cluster:
+### Deploy Kafka clusters on both the primary and DR sites using Strimzi custom resources (CRs).
+
+
+#### Primary Cluster
+
+1. Create a Kafka CR on the primary cluster:
 
 https://github.com/abhishekvishnoi/kafka-dr-setup/blob/2bbebfe5f1114a866f88b3323bf5ac00fd266cae/DC-DR/primary-cluster/kafka-primary-cluster.yaml#L1-L67
 
-1.1.2. Create a user for Kafka primary cluster:
+2. Create a user for Kafka primary cluster:
 
 https://github.com/abhishekvishnoi/kafka-dr-setup/blob/2bbebfe5f1114a866f88b3323bf5ac00fd266cae/DC-DR/primary-cluster/primary-cluster-user2.yaml#L1-L29
 
-1.1.3. Deploy Kafka UI for primary cluster
+3. Deploy Kafka UI for primary cluster
 
 https://github.com/abhishekvishnoi/kafka-dr-setup/blob/2bbebfe5f1114a866f88b3323bf5ac00fd266cae/DC-DR/primary-cluster/primay-kafka-ui.yaml#L1-L78
 
-1.2. Secondary Cluster
+#### Secondary Cluster
 
-1.2.1. Create a Kafka CR on the secondary cluster:
+1. Create a Kafka CR on the secondary cluster:
 
 https://github.com/abhishekvishnoi/kafka-dr-setup/blob/2bbebfe5f1114a866f88b3323bf5ac00fd266cae/DC-DR/secondary-cluster/kafka-secondary-cluster.yaml#L1-L67
 
-1.2.2. Create a user for Kafka secondary cluster:
+2. Create a user for Kafka secondary cluster:
 
 https://github.com/abhishekvishnoi/kafka-dr-setup/blob/2bbebfe5f1114a866f88b3323bf5ac00fd266cae/DC-DR/secondary-cluster/secondary-cluster-user2.yaml#L1-L29
 
-1.2.3. Deploy Kafka UI for primary cluster
+3. Deploy Kafka UI for primary cluster
 
 https://github.com/abhishekvishnoi/kafka-dr-setup/blob/2bbebfe5f1114a866f88b3323bf5ac00fd266cae/DC-DR/secondary-cluster/secondary-kafka-ui.yaml#L1-L78
+
+
+### Deploy mirror Maker 2 on Secondary Cluster.
+
+#### Setup primary cluster User secret on secnodary [DR] ocp 
+
+1. Create the Kafka User secret from primary cluster into the secondary cluster.
+
+2. Create the kafka-cluster-ca-cert for primary cluster into the secondary clusster.
+
+
+
+### Deploy the mirror maker2 in the secondary cluster 
+
+
+.1 Use thefollwoing CR to deploy mirrormaker2
+
+
+https://github.com/abhishekvishnoi/kafka-dr-setup/blob/b18f00479d45a4c4ac85a078bdf47aacf38aaa81/DC-DR/secondary-cluster/kafka-mirror-maker-2-tls.yaml#L1-L58
