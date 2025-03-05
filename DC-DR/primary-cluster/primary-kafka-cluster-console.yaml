@@ -1,0 +1,14 @@
+---
+apiVersion: console.streamshub.github.com/v1alpha1
+kind: Console
+metadata:
+  name: primary-kafka-conosle
+spec:
+  hostname: primary-kafka-console.apps.cluster-cjn65.cjn65.sandbox2973.opentlc.com
+  kafkaClusters:
+    - name: kafka-primary-cluster
+      namespace: kafka
+      credentials:
+        kafkaUser:
+          name: console-kafka-user1
+      listener: extscram

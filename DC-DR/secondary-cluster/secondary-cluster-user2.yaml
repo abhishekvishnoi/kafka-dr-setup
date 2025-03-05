@@ -1,0 +1,29 @@
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaUser
+metadata:
+  name: secondary-cluster-user2
+  namespace: kafka
+spec:
+  authentication:
+    type: tls
+  authorization:
+    acls:
+      - operations:
+          - All
+        resource:
+          name: ''
+          patternType: literal
+          type: cluster
+      - operations:
+          - All
+        resource:
+          name: '*'
+          patternType: literal
+          type: topic
+      - operations:
+          - All
+        resource:
+          name: '*'
+          patternType: literal
+          type: group
+    type: simple

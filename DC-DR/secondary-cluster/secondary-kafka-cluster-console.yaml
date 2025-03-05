@@ -1,0 +1,14 @@
+---
+apiVersion: console.streamshub.github.com/v1alpha1
+kind: Console
+metadata:
+  name: secondary-kafka-conosle
+spec:
+  hostname: secondary-kafka-console.apps.cluster-thvh4.thvh4.sandbox673.opentlc.com
+  kafkaClusters:
+    - name: kafka-secondary-cluster
+      namespace: kafka
+      credentials:
+        kafkaUser:
+          name: console-kafka-user1
+      listener: extscram
